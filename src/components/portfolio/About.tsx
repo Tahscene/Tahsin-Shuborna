@@ -44,8 +44,8 @@ export function About() {
 
         <div className="flex flex-col items-center gap-8">
           <div
-            className="h-[220px] w-[220px] shrink-0 overflow-hidden rounded-full bg-chalk-dim ring-4 ring-offset-4 ring-offset-paper"
-            style={{ boxShadow: "0 0 0 4px var(--maroon)" }}
+            className="h-[220px] w-[220px] shrink-0 overflow-hidden rounded-full border-4 bg-chalk-dim"
+            style={{ borderColor: "var(--maroon)" }}
           >
             <img
               src="https://placehold.co/440x440/B9C4BD/0E1A15?text=Photo"
@@ -53,6 +53,7 @@ export function About() {
               className="h-full w-full object-cover"
             />
           </div>
+
 
           <aside className="chalk-texture w-full rounded-2xl bg-board p-6 text-chalk shadow-lg sm:p-8">
             <p className="font-accent text-xs uppercase tracking-[0.24em] text-accent accent-transition">
