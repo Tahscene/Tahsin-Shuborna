@@ -15,19 +15,23 @@ const items: Item[] = [
     org: "Elite Research Lab LLC",
     date: "Current",
     body: "Ongoing research work in deep learning and applied AI alongside the FlyRank AI internship.",
+    icon: GraduationCap,
   },
   {
     role: "Backend AI Engineer Intern",
     org: "FlyRank AI",
     date: "Current",
     body: "Supporting AI powered backend systems and data processing.",
+    icon: Cpu,
   },
   {
     role: "Data Analytics Job Simulation",
     org: "Deloitte Australia via Forage",
     date: "June 2026",
     body: "Applied analytics scenarios covering data classification, forensic analysis and dashboard reporting.",
+    icon: BadgeCheck,
   },
+
   {
     role: "BSc in Computer Science and Engineering",
     org: "Ahsanullah University of Science and Technology",
