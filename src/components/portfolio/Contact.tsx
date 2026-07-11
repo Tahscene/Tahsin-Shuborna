@@ -15,7 +15,7 @@ export function Contact() {
 
         <div className="mt-8 flex flex-wrap gap-3">
           <a
-            href="/cv-faculty.pdf"
+            href="/Tahsin_Shuborna_Lecturer_CSE.pdf"
             download
             className="inline-flex items-center gap-2 rounded-full bg-accent px-5 py-3 text-sm font-medium text-ink accent-transition hover:opacity-90"
           >
@@ -23,10 +23,11 @@ export function Contact() {
             Faculty CV
           </a>
           <a
-            href="/cv-analyst.pdf"
+            href="/Tahsin_Shuborna_Data_Analyst.pdf"
             download
             className="inline-flex items-center gap-2 rounded-full border border-chalk/40 px-5 py-3 text-sm font-medium text-chalk transition-colors hover:bg-chalk/10"
           >
+
             <Download className="h-4 w-4" />
             Data Analyst CV
           </a>
