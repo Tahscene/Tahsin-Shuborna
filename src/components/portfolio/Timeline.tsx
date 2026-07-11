@@ -1,4 +1,15 @@
-const items = [
+import { GraduationCap, Cpu, BadgeCheck, type LucideIcon } from "lucide-react";
+
+type Item = {
+  role: string;
+  org: string;
+  date: string;
+  body: string;
+  icon?: LucideIcon;
+};
+
+const items: Item[] = [
+
   {
     role: "Research Intern",
     org: "Elite Research Lab LLC",
