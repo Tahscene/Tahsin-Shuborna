@@ -1,4 +1,4 @@
-import { Download, Mail, Linkedin, Github } from "lucide-react";
+import { Download, Mail, Linkedin, Github, Fingerprint, GraduationCap } from "lucide-react";
 
 export function Contact() {
   return (
@@ -15,7 +15,7 @@ export function Contact() {
 
         <div className="mt-8 flex flex-wrap gap-3">
           <a
-            href="/cv-faculty.pdf"
+            href="/Tahsin_Shuborna_Lecturer_CSE.pdf"
             download
             className="inline-flex items-center gap-2 rounded-full bg-accent px-5 py-3 text-sm font-medium text-ink accent-transition hover:opacity-90"
           >
@@ -23,16 +23,17 @@ export function Contact() {
             Faculty CV
           </a>
           <a
-            href="/cv-analyst.pdf"
+            href="/Tahsin_Shuborna_Data_Analyst.pdf"
             download
             className="inline-flex items-center gap-2 rounded-full border border-chalk/40 px-5 py-3 text-sm font-medium text-chalk transition-colors hover:bg-chalk/10"
           >
+
             <Download className="h-4 w-4" />
             Data Analyst CV
           </a>
         </div>
 
-        <ul className="mt-10 grid gap-4 sm:grid-cols-3">
+        <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
           <li>
             <a
               href="mailto:tahsin.shuborna@example.com"
@@ -75,7 +76,36 @@ export function Contact() {
               </div>
             </a>
           </li>
+          <li>
+            <a
+              href="ORCID_URL_HERE"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-3 rounded-xl border border-chalk/15 bg-board-dark/40 p-4 transition-colors hover:border-accent accent-transition"
+            >
+              <Fingerprint className="h-5 w-5 text-accent accent-transition" />
+              <div>
+                <p className="font-accent text-xs uppercase tracking-[0.2em] text-chalk-dim">ORCID</p>
+                <p className="text-sm text-chalk">orcid.org</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="SCHOLAR_URL_HERE"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-3 rounded-xl border border-chalk/15 bg-board-dark/40 p-4 transition-colors hover:border-accent accent-transition"
+            >
+              <GraduationCap className="h-5 w-5 text-accent accent-transition" />
+              <div>
+                <p className="font-accent text-xs uppercase tracking-[0.2em] text-chalk-dim">Scholar</p>
+                <p className="text-sm text-chalk">Google Scholar</p>
+              </div>
+            </a>
+          </li>
         </ul>
+
 
         <footer className="mt-16 border-t border-chalk/15 pt-6 text-xs text-chalk-dim">
           <p>

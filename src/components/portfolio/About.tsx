@@ -42,20 +42,35 @@ export function About() {
           </div>
         </div>
 
-        <aside className="chalk-texture rounded-2xl bg-board p-6 text-chalk shadow-lg sm:p-8">
-          <p className="font-accent text-xs uppercase tracking-[0.24em] text-accent accent-transition">
-            On the board
-          </p>
-          <h3 className="mt-2 font-display text-xl">By the numbers</h3>
-          <dl className="mt-6 space-y-4">
-            {stats.map((s) => (
-              <div key={s.label} className="border-b border-chalk-dim/20 pb-3 last:border-0">
-                <dt className="text-xs uppercase tracking-wider text-chalk-dim">{s.label}</dt>
-                <dd className="mt-1 font-display text-lg text-chalk">{s.value}</dd>
-              </div>
-            ))}
-          </dl>
-        </aside>
+        <div className="flex flex-col items-center gap-8">
+          <div
+            className="h-[220px] w-[220px] shrink-0 overflow-hidden rounded-full border-4 bg-chalk-dim"
+            style={{ borderColor: "var(--maroon)" }}
+          >
+            <img
+              src="https://placehold.co/440x440/B9C4BD/0E1A15?text=Photo"
+              alt="Portrait of Tahsin Shuborna"
+              className="h-full w-full object-cover"
+            />
+          </div>
+
+
+          <aside className="chalk-texture w-full rounded-2xl bg-board p-6 text-chalk shadow-lg sm:p-8">
+            <p className="font-accent text-xs uppercase tracking-[0.24em] text-accent accent-transition">
+              On the board
+            </p>
+            <h3 className="mt-2 font-display text-xl">By the numbers</h3>
+            <dl className="mt-6 space-y-4">
+              {stats.map((s) => (
+                <div key={s.label} className="border-b border-chalk-dim/20 pb-3 last:border-0">
+                  <dt className="text-xs uppercase tracking-wider text-chalk-dim">{s.label}</dt>
+                  <dd className="mt-1 font-display text-lg text-chalk">{s.value}</dd>
+                </div>
+              ))}
+            </dl>
+          </aside>
+        </div>
+
       </div>
     </section>
   );

@@ -1,22 +1,37 @@
-const items = [
+import { GraduationCap, Cpu, BadgeCheck, type LucideIcon } from "lucide-react";
+
+type Item = {
+  role: string;
+  org: string;
+  date: string;
+  body: string;
+  icon?: LucideIcon;
+};
+
+const items: Item[] = [
+
   {
     role: "Research Intern",
     org: "Elite Research Lab LLC",
     date: "Current",
     body: "Ongoing research work in deep learning and applied AI alongside the FlyRank AI internship.",
+    icon: GraduationCap,
   },
   {
     role: "Backend AI Engineer Intern",
     org: "FlyRank AI",
     date: "Current",
     body: "Supporting AI powered backend systems and data processing.",
+    icon: Cpu,
   },
   {
     role: "Data Analytics Job Simulation",
     org: "Deloitte Australia via Forage",
     date: "June 2026",
     body: "Applied analytics scenarios covering data classification, forensic analysis and dashboard reporting.",
+    icon: BadgeCheck,
   },
+
   {
     role: "BSc in Computer Science and Engineering",
     org: "Ahsanullah University of Science and Technology",
@@ -64,10 +79,16 @@ export function Timeline() {
                           : "var(--accent)",
                   }}
                 />
-                <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+                  {it.icon && (
+                    <span className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-accent bg-paper accent-transition">
+                      <it.icon className="h-4 w-4 text-accent accent-transition" />
+                    </span>
+                  )}
                   <h3 className="font-display text-lg text-ink">{it.role}</h3>
                   <span className="text-sm text-ink/60">at {it.org}</span>
                 </div>
+
                 <p className="mt-1 font-accent text-sm text-ink/60">{it.date}</p>
                 <p className="mt-2 max-w-3xl text-ink/80 leading-relaxed">{it.body}</p>
               </li>
