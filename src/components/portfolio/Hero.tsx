@@ -1,12 +1,30 @@
 import { useEffect, useRef, useState } from "react";
-import { SceneToddler, SceneChild, SceneStudent, SceneEducator } from "./HeroScenes";
+import {
+  SceneToddler,
+  SceneChild,
+  SceneStudent,
+  SceneEducator,
+  SceneCountingBlocks,
+  SceneBarChartPaper,
+  SceneTeenLaptop,
+  SceneAnalystBoard,
+} from "./HeroScenes";
+import { useMode } from "./ModeContext";
 
-const scenes = [
+const teacherScenes = [
   { Comp: SceneToddler, caption: "A toddler with a toy whiteboard. Where it started." },
   { Comp: SceneChild, caption: "A child teaching two friends. Playing school with real conviction." },
   { Comp: SceneStudent, caption: "A young woman in a saree teaching a small group. Finding her voice." },
   { Comp: SceneEducator, caption: "A confident educator at a large whiteboard. Teaching with intent." },
 ];
+
+const analystScenes = [
+  { Comp: SceneCountingBlocks, caption: "Chapter one. The first numbers in small hands." },
+  { Comp: SceneBarChartPaper, caption: "Chapter two. Turning numbers into patterns." },
+  { Comp: SceneTeenLaptop, caption: "Chapter three. The first spreadsheet. The first chart." },
+  { Comp: SceneAnalystBoard, caption: "Chapter four. The career I chose. Data and analysis." },
+];
+
 
 export function Hero() {
   const wrapRef = useRef<HTMLDivElement>(null);
