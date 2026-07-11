@@ -40,18 +40,30 @@ export function Publications() {
                 [{i + 1}] {p.status}
               </span>
               <p className="mt-2 text-ink/85 leading-relaxed">{p.citation}</p>
-              {p.doi && (
+              <div className="mt-3 flex flex-wrap items-center gap-4">
                 <a
-                  href={p.doi}
+                  href={p.pdf}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-2 inline-block text-sm text-accent underline underline-offset-4 accent-transition hover:opacity-80"
+                  className="inline-flex items-center gap-2 rounded-full border border-accent px-4 py-1.5 text-sm text-accent accent-transition hover:bg-accent/10"
                 >
-                  DOI: {p.doiLabel}
+                  <FileText className="h-4 w-4" />
+                  Read Paper
                 </a>
-              )}
+                {p.doi && (
+                  <a
+                    href={p.doi}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-accent underline underline-offset-4 accent-transition hover:opacity-80"
+                  >
+                    DOI: {p.doiLabel}
+                  </a>
+                )}
+              </div>
             </li>
           ))}
+
         </ol>
       </div>
     </section>
