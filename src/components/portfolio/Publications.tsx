@@ -1,3 +1,5 @@
+import { FileText } from "lucide-react";
+
 const pubs = [
   {
     citation:
@@ -5,18 +7,22 @@ const pubs = [
     doi: "https://doi.org/10.1109/ICCIT.2025.example",
     doiLabel: "10.1109/ICCIT.2025.example",
     status: "Published",
+    pdf: "/leafvrnet-paper.pdf",
   },
   {
     citation:
       'T. Shuborna et al., "EnviroBirth: TabNet driven preterm birth prediction with environmental and clinical features," Journal manuscript, 2026.',
     status: "Under review",
+    pdf: "/envirobirth-paper.pdf",
   },
   {
     citation:
       'T. Shuborna et al., "VaxSight: A distributed FT Transformer pipeline for population level vaccine effectiveness analysis," Journal manuscript, 2026.',
     status: "Under review",
+    pdf: "/vaxsight-paper.pdf",
   },
 ];
+
 
 export function Publications() {
   return (
