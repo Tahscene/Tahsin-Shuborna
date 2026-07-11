@@ -79,10 +79,16 @@ export function Timeline() {
                           : "var(--accent)",
                   }}
                 />
-                <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+                  {it.icon && (
+                    <span className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-accent bg-paper accent-transition">
+                      <it.icon className="h-4 w-4 text-accent accent-transition" />
+                    </span>
+                  )}
                   <h3 className="font-display text-lg text-ink">{it.role}</h3>
                   <span className="text-sm text-ink/60">at {it.org}</span>
                 </div>
+
                 <p className="mt-1 font-accent text-sm text-ink/60">{it.date}</p>
                 <p className="mt-2 max-w-3xl text-ink/80 leading-relaxed">{it.body}</p>
               </li>
