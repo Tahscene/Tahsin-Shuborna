@@ -1,4 +1,4 @@
-import { Download, Mail, Linkedin, Github } from "lucide-react";
+import { Download, Mail, Linkedin, Github, Fingerprint, GraduationCap } from "lucide-react";
 
 export function Contact() {
   return (
