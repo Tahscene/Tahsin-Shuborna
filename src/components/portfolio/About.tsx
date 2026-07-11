@@ -43,10 +43,7 @@ export function About() {
         </div>
 
         <div className="flex flex-col items-center gap-8">
-          <div
-            className="h-[220px] w-[220px] shrink-0 overflow-hidden rounded-full border-4 bg-chalk-dim"
-            style={{ borderColor: "var(--maroon)" }}
-          >
+          <div className="h-[220px] w-[220px] shrink-0 overflow-hidden bg-chalk-dim">
             <img
               src="https://placehold.co/440x440/B9C4BD/0E1A15?text=Photo"
               alt="Portrait of Tahsin Shuborna"

@@ -1,5 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import {
+  Mail,
+  Linkedin,
+  Github,
+  Fingerprint,
+  GraduationCap,
+} from "lucide-react";
+import {
   SceneToddler,
   SceneChild,
   SceneStudent,
