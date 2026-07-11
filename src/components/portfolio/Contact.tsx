@@ -33,7 +33,7 @@ export function Contact() {
           </a>
         </div>
 
-        <ul className="mt-10 grid gap-4 sm:grid-cols-3">
+        <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
           <li>
             <a
               href="mailto:tahsin.shuborna@example.com"
