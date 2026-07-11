@@ -27,8 +27,12 @@ const analystScenes = [
 
 
 export function Hero() {
+  const { mode } = useMode();
+  const scenes = mode === "analyst" ? analystScenes : teacherScenes;
+  const sceneToneClass = mode === "analyst" ? "text-accent" : "text-chalk";
   const wrapRef = useRef<HTMLDivElement>(null);
   const [progress, setProgress] = useState(0);
+
 
   useEffect(() => {
     const onScroll = () => {
