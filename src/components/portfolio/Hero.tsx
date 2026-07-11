@@ -86,7 +86,7 @@ export function Hero() {
                   style={{ opacity: op, transition: "opacity 200ms linear" }}
                   aria-hidden={op < 0.05}
                 >
-                  <Comp className="h-[46vh] w-auto max-w-full text-chalk" />
+                  <Comp className={`h-[46vh] w-auto max-w-full accent-transition ${sceneToneClass}`} />
                   <p className="max-w-xl px-4 text-center font-accent text-base text-chalk-dim sm:text-lg">
                     {caption}
                   </p>
