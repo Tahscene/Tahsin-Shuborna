@@ -1,5 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import {
+  Mail,
+  Linkedin,
+  Github,
+  Fingerprint,
+  GraduationCap,
+} from "lucide-react";
+import {
   SceneToddler,
   SceneChild,
   SceneStudent,
@@ -74,6 +81,52 @@ export function Hero() {
               One Story One Marker
             </h1>
             <p className="mt-3 text-chalk-dim">Scroll to watch the journey unfold.</p>
+
+            <div className="mt-4 flex flex-wrap items-center gap-4">
+              <a
+                href="mailto:shujaanat06@gmail.com"
+                aria-label="Email"
+                className="text-chalk-dim transition-colors hover:text-accent accent-transition"
+              >
+                <Mail className="h-[18px] w-[18px]" />
+              </a>
+              <a
+                href="https://linkedin.com/in/tahsin-shuborna-shujaana"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="text-chalk-dim transition-colors hover:text-accent accent-transition"
+              >
+                <Linkedin className="h-[18px] w-[18px]" />
+              </a>
+              <a
+                href="https://github.com/tahscene"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+                className="text-chalk-dim transition-colors hover:text-accent accent-transition"
+              >
+                <Github className="h-[18px] w-[18px]" />
+              </a>
+              <a
+                href="https://orcid.org/0009-0002-0382-5166"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="ORCID"
+                className="text-chalk-dim transition-colors hover:text-accent accent-transition"
+              >
+                <Fingerprint className="h-[18px] w-[18px]" />
+              </a>
+              <a
+                href="https://scholar.google.com/citations?user=XPETzMQAAAAJ&hl=en"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Google Scholar"
+                className="text-chalk-dim transition-colors hover:text-accent accent-transition"
+              >
+                <GraduationCap className="h-[18px] w-[18px]" />
+              </a>
+            </div>
           </div>
 
           <div className="relative mt-6 flex-1">
