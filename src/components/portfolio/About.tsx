@@ -1,4 +1,8 @@
 import { useMode } from "./ModeContext";
+import portrait from "@/assets/tahsin-portrait.jpg.asset.json";
+
+const fadeMask =
+  "radial-gradient(ellipse at 50% 45%, black 55%, transparent 90%)";
 
 const teacherCopy = [
   "I am Tahsin Shuborna. I am a Computer Science and Engineering graduate from Ahsanullah University of Science and Technology. Teaching has been my constant thread since childhood. It moved from make believe classrooms into real ones through tutoring, peer mentoring and undergraduate research supervision.",
@@ -43,9 +47,15 @@ export function About() {
         </div>
 
         <div className="flex flex-col items-center gap-8">
-          <div className="h-[220px] w-[220px] shrink-0 overflow-hidden bg-chalk-dim">
+          <div
+            className="h-[260px] w-[260px] shrink-0"
+            style={{
+              WebkitMaskImage: fadeMask,
+              maskImage: fadeMask,
+            }}
+          >
             <img
-              src="https://placehold.co/440x440/B9C4BD/0E1A15?text=Photo"
+              src={portrait.url}
               alt="Portrait of Tahsin Shuborna"
               className="h-full w-full object-cover"
             />
