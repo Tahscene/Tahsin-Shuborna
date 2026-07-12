@@ -23,24 +23,41 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      # v4 ব্যবহার করছি যাতে v6 automatic npm caching না চালায়
       - name: Setup Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v4
         with:
           node-version: "22"
-          package-manager-cache: false
 
       - name: Install dependencies
-        run: npm install
+        run: npm install --no-package-lock
 
-      - name: Build for GitHub Pages
+      - name: Build project
         run: npm run build
         env:
           NITRO_PRESET: github_pages
 
-      - name: Upload GitHub Pages artifact
+      - name: Prepare Pages files
+        run: |
+          rm -rf _site
+
+          if [ -d ".output/public" ]; then
+            cp -R .output/public _site
+          elif [ -d "dist" ]; then
+            cp -R dist _site
+          else
+            echo "Build output not found."
+            echo "Available folders:"
+            find . -maxdepth 3 -type d
+            exit 1
+          fi
+
+          touch _site/.nojekyll
+
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./.output/public
+          path: ./_site
 
   deploy:
     needs: build
@@ -51,6 +68,6 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      - name: Deploy to GitHub Pages
+      - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
