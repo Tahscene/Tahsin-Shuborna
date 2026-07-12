@@ -23,7 +23,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "One story, one marker. Teaching, research plus data analytics from a CSE graduate.",
+          "Portfolio of Tahsin Shuborna. Computer Science and Engineering graduate applying for teaching faculty positions plus data analyst roles.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

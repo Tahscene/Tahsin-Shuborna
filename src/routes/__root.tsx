@@ -81,9 +81,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Portfolio of Tahsin Shuborna. CSE graduate pursuing teaching faculty positions plus data analyst roles.",
+          "Portfolio of Tahsin Shuborna. Computer Science and Engineering graduate applying for teaching faculty positions plus data analyst roles.",
       },
       { name: "author", content: "Tahsin Shuborna" },
+      { property: "og:title", content: "Tahsin Shuborna. Educator plus Data Analyst" },
+      { name: "twitter:title", content: "Tahsin Shuborna. Educator plus Data Analyst" },
+      { property: "og:description", content: "Portfolio of Tahsin Shuborna. Computer Science and Engineering graduate applying for teaching faculty positions plus data analyst roles." },
+      { name: "twitter:description", content: "Portfolio of Tahsin Shuborna. Computer Science and Engineering graduate applying for teaching faculty positions plus data analyst roles." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/a2ba9edf-3a45-496f-84ab-3799409b97fb/id-preview-52db4cba--38e32f9c-134b-4b12-9d13-dea558cda077.lovable.app-1783845005406.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/a2ba9edf-3a45-496f-84ab-3799409b97fb/id-preview-52db4cba--38e32f9c-134b-4b12-9d13-dea558cda077.lovable.app-1783845005406.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:type", content: "website" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
