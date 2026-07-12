@@ -15,14 +15,8 @@ export default defineConfig({
       entry: "server",
     },
 
-    // Generate a static client-side app for GitHub Pages
     spa: {
       enabled: true,
-      prerender: {
-        outputPath: "/index.html",
-        crawlLinks: false,
-        retryCount: 0,
-      },
     },
   },
 });
