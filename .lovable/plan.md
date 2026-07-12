@@ -1,21 +1,16 @@
 Plan
 
-1. About section photo
-   - File: src/components/portfolio/About.tsx
-   - Remove the maroon ring and the circular crop.
-   - Keep the photo as a plain 220px square: remove `rounded-full`, `border-4`, and the inline `borderColor` style.
-   - Leave the placeholder image source and alt text unchanged.
+1. Upload the user's photo as a Lovable Asset
+   - Run `lovable-assets create --file /mnt/user-uploads/358e83f2-9a3b-4da0-aa56-84b562c36189.jpg --filename tahsin-portrait.jpg > src/assets/tahsin-portrait.jpg.asset.json`.
+   - No binary copied into the repo.
 
-2. Hero contact icon row
-   - File: src/components/portfolio/Hero.tsx
-   - Add a compact horizontal row of small icon-only links under the hero headline/subheadline, above the scroll prompt.
-   - Links:
-     - Email → mailto:shujaanat06@gmail.com (Mail icon)
-     - LinkedIn → https://linkedin.com/in/tahsin-shuborna-shujaana (Linkedin icon)
-     - GitHub → https://github.com/tahscene (Github icon)
-     - ORCID → https://orcid.org/0009-0002-0382-5166 (Fingerprint icon)
-     - Google Scholar → https://scholar.google.com/citations?user=XPETzMQAAAAJ&hl=en (GraduationCap icon)
-   - Style: icons at ~18px, color `text-chalk-dim`, hover `text-accent`, spaced with `gap-4`, each link opens external URLs in a new tab where applicable and uses `rel="noopener noreferrer"`.
-   - Keep the Teacher/Analyst toggle and mobile hamburger menu exactly as they are.
+2. Replace the placeholder photo in About.tsx
+   - File: `src/components/portfolio/About.tsx`
+   - Import the new asset JSON and use its `url` as the `<img>` src (alt stays "Portrait of Tahsin Shuborna").
+   - Remove the solid `bg-chalk-dim` square. Container becomes a borderless 260px block (slightly larger for presence) with no background, no border, no rounded crop.
+   - Blend the photo edges into the `bg-paper` background using a soft radial mask so the subject fades into the page instead of ending on a hard rectangle:
+     - `mask-image: radial-gradient(ellipse at center, black 55%, transparent 90%)` (with `-webkit-mask-image` fallback)
+     - `img` uses `object-cover` and inherits the mask via the wrapper.
+   - Keep the same grid placement, spacing, and the "By the numbers" board card exactly as they are.
 
-No other files or styles will be touched. The existing color palette, fonts, and all other sections remain unchanged.
+3. No other files, colors, fonts, or sections change.
